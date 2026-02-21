@@ -19,15 +19,8 @@ export function useGroceryList() {
                 console.error('Failed to parse local storage', e);
             }
         }
-        // Default initial items dynamically categorized by our new rules
-        return [
-            { id: '1', name: 'Bananas', subtitle: '1 bunch • Organic', category: getCategoryForItem('Bananas', {}), completed: false, urgent: false },
-            { id: '2', name: 'Spinach', subtitle: '2 bags', category: getCategoryForItem('Spinach', {}), completed: false, urgent: true },
-            { id: '3', name: 'Avocados', subtitle: '', category: getCategoryForItem('Avocados', {}), completed: false, urgent: false },
-            { id: '4', name: 'Almond Milk', subtitle: 'Unsweetened', category: getCategoryForItem('Almond Milk', {}), completed: false, urgent: false },
-            { id: '5', name: 'Whole Wheat Bread', subtitle: '', category: getCategoryForItem('Whole Wheat Bread', {}), completed: true, urgent: false },
-            { id: '6', name: 'Large Eggs', subtitle: '', category: getCategoryForItem('Large Eggs', {}), completed: true, urgent: false },
-        ];
+        // Start with an empty list
+        return [];
     });
 
     useEffect(() => {
